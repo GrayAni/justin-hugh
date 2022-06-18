@@ -36,7 +36,7 @@ export default {
       gsap.from('.hero__other-text h3', {
         duration: 0.5,
         opacity: 0,
-        x: -10000,
+        x: -1000,
       })
       gsap.from('.hero__desc .hidden', {
         duration: 0.5,
@@ -106,7 +106,7 @@ export default {
     z-index: 2;
 
     p {
-      font-weight: 700;
+      font-weight: 600;
       font-size: 12px;
       text-transform: uppercase;
       transform: rotate(90deg);
@@ -121,9 +121,60 @@ export default {
     .image {
       background: url(../images/jh.png) no-repeat;
       height: 120vh;
-      width: 700px;
+      width: 800px;
       background-size: contain;
       transition: 0.5s;
+    }
+  }
+}
+
+@media only screen and(max-width: 800px) {
+  .hero {
+    margin: 10vh auto 0;
+    &__text {
+      top: 25vh;
+      left: -40%;
+
+      h3 {
+        font-size: 1.3rem;
+        color: #545e63;
+      }
+    }
+    &__name {
+      font-size: 5rem;
+      height: 140px;
+      width: 600px;
+    }
+    &__other-text {
+      margin-top: -20px;
+    }
+    &__desc {
+      line-height: 1.6;
+      margin-top: 5px;
+    }
+    &__foot-text {
+      top: 20vh;
+      right: 50px;
+      z-index: 2;
+      display: none;
+
+      p {
+        font-size: 10px;
+      }
+    }
+    &__images {
+      z-index: 1;
+      position: absolute;
+      right: 0%;
+      left: 50%;
+      top: 20vh;
+      .image {
+        background: url(../images/jh.png) no-repeat;
+        height: 80vh;
+        width: 100%;
+        background-size: cover;
+        transition: 0.5s;
+      }
     }
   }
 }

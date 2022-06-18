@@ -17,7 +17,9 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
     script: [
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js' },
       {
@@ -42,7 +44,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     // '@nuxtjs/eslint-module',
-    'hover-effect',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
